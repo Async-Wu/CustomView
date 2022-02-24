@@ -19,6 +19,7 @@ public class Draggable_Scaled_Rectangle extends View {
     float downY;
     float currentX;
     float currentY;
+    boolean isFirst;
 
     public Draggable_Scaled_Rectangle(Context context) {
         super(context);
@@ -35,6 +36,10 @@ public class Draggable_Scaled_Rectangle extends View {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public Draggable_Scaled_Rectangle(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+    }
+
+    void initData(){
+        isFirst = true;
     }
 
     @Override
